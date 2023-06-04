@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Директивы импортируют классы JavaFX, необходимые для создания пользовательского интерфейса-->
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<!--контейнер для размещения элементов пользовательского интерфейса-->
+<!--Атрибуты fx:id используются для идентификации элементов пользовательского интерфейса в коде JavaFX-->
+<!--Атрибуты prefWidth и prefHeight задают предпочтительные размеры элементов пользовательского интерфейса-->
+<Pane fx:id="mainWin" maxHeight="350.0" maxWidth="250.0" minHeight="350.0" minWidth="250.0" prefHeight="350.0"
+      prefWidth="250.0" style="-fx-background-color: #e2f8fc; -fx-font-family: 'Comic Sans MS';
+       -fx-font-size: 14px;" xmlns="http://javafx.com/javafx/19"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.BmiCalc.Controller">
+<!--Атрибут для группировки дочерних элементов внутри родительского узла-->
+    <children>
+        <!--Атрибуты layoutX и layoutY задают координаты расположения элемента пользовательского интерфейса на Pane-->
+        <!--Атрибуты text задают текст для Label-->
+        <Label fx:id="label_height" layoutX="22.0" layoutY="82.0" prefHeight="21.0" prefWidth="38.0" text="Рост">
+        </Label>
+        <Label fx:id="label_weight" layoutX="22.0" layoutY="131.0" text="Вес">
+        </Label>
+        <Label fx:id="label_bmi" layoutX="34.0" layoutY="263.0" text="ИМТ:">
+        </Label>
+        <Label fx:id="result_bmi" layoutX="118.0" layoutY="262.0" text="0">
+        </Label>
+        <!--onMouseClicked определяет обработчик событий для кнопки Button-->
+        <!--mnemonicParsing парсинг мнемоник (например, подчеркивание в тексте кнопки,
+        которое может быть использовано с клавишей "alt" для быстрого доступа)-->
+        <Button fx:id="buttonCalc" layoutX="73.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#calcBMI"
+                prefHeight="37.0" prefWidth="120.0" style="-fx-background-color: #2cbfc7;" text="Вычислить"
+                textFill="WHITE"> <!--textFill задает цвет текста для Button-->
+        </Button>
+        <TextField fx:id="fieldHeight" layoutX="73.0" layoutY="80.0" prefHeight="29.0" prefWidth="120.0" text="165">
+            <!--Установка шрифта и размера для полей-->
+            <font>
+                <Font name="Comic Sans MS" size="12.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="fieldWeight" layoutX="73.0" layoutY="129.0" prefHeight="29.0" prefWidth="120.0" text="60">
+            <font>
+                <Font name="Comic Sans MS" size="12.0"/>
+            </font>
+        </TextField>
+        <Label fx:id="label_height1" layoutX="201.0" layoutY="83.0" prefHeight="21.0" prefWidth="38.0" text="см"></Label>
+        <Label fx:id="label_weight1" layoutX="201.0" layoutY="132.0" text="кг"></Label>
+    </children>
+</Pane>
