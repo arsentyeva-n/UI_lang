@@ -5,7 +5,7 @@ public class BmiCalculator {
     private double height; // рост в метрах
 
     public BmiCalculator() {
-       // setWeight(weight);
+        // setWeight(weight);
         //setHeight(height);
     }
 
@@ -32,7 +32,7 @@ public class BmiCalculator {
     }
 
     public double calculateBmi() {
-        double bmi =(weight / (height * height))*10000;
+        double bmi = (weight / (height * height)) * 10000;
         return bmi;
     }
 

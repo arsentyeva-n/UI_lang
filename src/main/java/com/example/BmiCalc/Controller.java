@@ -30,12 +30,13 @@ public class Controller {
     @FXML
     private Label result_bmi;
 
-  //  private BmiCalculator bmiCalc = new BmiCalculator();
+    //  private BmiCalculator bmiCalc = new BmiCalculator();
 
     void checkFields() {
         if (fieldHeight.getText().equals("") || fieldWeight.getText().equals(""))
             throw new IllegalArgumentException("Поля не могут быть пустыми");
     }
+
     @FXML
     void calcBMI(MouseEvent event) {
         try {
@@ -44,12 +45,12 @@ public class Controller {
             double weight = Double.parseDouble(fieldWeight.getText());
             double height = Double.parseDouble(fieldHeight.getText());
 
-           bmiCalc.setHeight(height);
+            bmiCalc.setHeight(height);
             bmiCalc.setWeight(weight);
 
 
-           result_bmi.setText(String.format("%.2f", bmiCalc.calculateBmi()));
-        } catch (IllegalArgumentException e){
+            result_bmi.setText(String.format("%.2f", bmiCalc.calculateBmi()));
+        } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
 
         }

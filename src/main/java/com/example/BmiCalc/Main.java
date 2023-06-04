@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Controller.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),250,350);
+        Scene scene = new Scene(fxmlLoader.load(), 250, 350);
         stage.setTitle("Bmi Calculator");
         stage.setScene(scene);
         stage.show();
